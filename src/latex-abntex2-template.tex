@@ -1,16 +1,8 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
-%%%%%%%%%%%       PREAMBULO			%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% PREAMBULO %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% significa toda a parte que vem antes do documento
-% o equivalente a tag <header> do html
-
-%% CLASSE DO DOCUMENTO (ABNTEX2 - PADRÃO ABNT DE DOCUMENTOS ACADÊMICOS)
 \documentclass[oneside,12pt]{abntex2}
-
-
 
 %%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%
 
@@ -29,20 +21,18 @@
 \usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage[alf]{abntex2cite} % Citações padrão ABNT
 
-
 %%%%%%%%%%%%%%%%%%% INCLUDES  %%%%%%%%%%%%%%%%%%%
 
 %% include do arquivo de configuração do trabalho, com margens, cores e outros
 \include{article-config}
 
 
-
 %%%%%%%%%%%%%%%% CONFIGURAÇÃO DAS %%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%  SEÇÕES ABNTEX2  %%%%%%%%%%%%%%%
 
 %% Capa
-\titulo {Trabalho de GTI}
-\autor{	Gustavo Pereira Borges\\}
+\titulo {Trabalho de UC}
+\autor{name_here\\}
 \local{Florianópolis}
 \date{\today}	%% imprime a data de hoje
 
@@ -53,27 +43,18 @@
 	
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
-%%%%%%%%%%%   INÍCIO DO DOCUMENTO	%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% INÍCIO DO DOCUMENTO %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%	CAPA E FOLHA DE ROSTO  %%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%	CAPA E FOLHA DE ROSTO  %%%%%%%%%%%%%%%%%
 \imprimircapa			% cria a capa
 \imprimirfolhaderosto	% cria a folha de rosto
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%	FOLHA DE APROVAÇÃO (OBRIGATÓRIO) %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%	FOLHA DE APROVAÇÃO (OBRIGATÓRIO) %%%%%%%
 \begin{folhadeaprovacao}
 	\begin{center}
 		{\ABNTEXchapterfont\large\textsc{\imprimirautor}}
@@ -107,9 +88,7 @@
 	\end{center}
 \end{folhadeaprovacao}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	DEDICATÓRIA (OPCIONAL) %%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{dedicatoria}
 	\vspace*{\fill}
@@ -118,9 +97,7 @@
 \end{dedicatoria}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	AGRADECIMENTOS (OPCIONAL) %%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{agradecimentos}
 
@@ -129,9 +106,7 @@
 \end{agradecimentos}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	EPÍGRAFE (OPCIONAL) %%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{epigrafe}
 	\vspace*{\fill}
@@ -142,9 +117,7 @@
 \end{epigrafe}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	RESUMO (OBRIGATÓRIO) %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{resumo}
 
@@ -156,9 +129,7 @@ TEXTO DO RESUMO
 \end{resumo}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	ABSTRACT (OBRIGATÓRIO) %%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{resumo}[Abstract]
 	\begin{otherlanguage*}{english}
@@ -172,9 +143,7 @@ TEXTO DO RESUMO
 \end{resumo}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	SIGLAS (OBRIGATÓRIO SE HOUVER) %%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{siglas}
 
@@ -183,35 +152,26 @@ TEXTO DO RESUMO
 \end{siglas}
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	IMPRIME O SUMÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \tableofcontents* % imprime sumário
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
 %%%%%%%%%%%   ELEMENTOS TEXTUAIS	%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \textual
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	INTRODUÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Introdução}
 
 texto da introdução
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	FUNDAMENTAÇÃO TEÓRICA %%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{TÍTULO DO \textit{CAPÍTULO}}
 
@@ -224,16 +184,12 @@ texto da introdução
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
 %%%%%%%%%%% ELEMENTOS PÓS-TEXTUAIS	%%%%%%%%%%%
-%%%%%%%%%%%							%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \postextual
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%	BIBLIOGRAFIA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \bibliography{article-bibliography}
 
