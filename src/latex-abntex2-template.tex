@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%       PREAMBULO			%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% significa toda a parte que vem antes do documento
+% o equivalente a tag <header> do html
+
+%% CLASSE DO DOCUMENTO (ABNTEX2 - PADRÃO ABNT DE DOCUMENTOS ACADÊMICOS)
+\documentclass[oneside,12pt]{abntex2}
+
+
+
+%%%%%%%%%%%%%%%%%%% PACOTES %%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage{helvet} 	%% importa fonte helvet/arial equivalente
+\usepackage{graphicx}	%% permite usar imagens
+\usepackage{color}		%% configurar cores
+\usepackage{listings} 	%% codelistings, pra poder incluir code snippets no texto
+
+% Pacotes de matemática, física e outros
+\usepackage{geometry}
+%\usepackage{revtex4-1} %% pacote mais usado pra equações de física
+\usepackage{amsmath}	%% pacote funções e símbolos matemáticos
+
+% Pacotes de citações
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite} % Citações padrão ABNT
+
+
+%%%%%%%%%%%%%%%%%%% INCLUDES  %%%%%%%%%%%%%%%%%%%
+
+%% include do arquivo de configuração do trabalho, com margens, cores e outros
+\include{article-config}
+
+
+
+%%%%%%%%%%%%%%%% CONFIGURAÇÃO DAS %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%  SEÇÕES ABNTEX2  %%%%%%%%%%%%%%%
+
+%% Capa
+\titulo {Trabalho de GTI}
+\autor{	Gustavo Pereira Borges\\}
+\local{Florianópolis}
+\date{\today}	%% imprime a data de hoje
+
+%% Folha de Rosto
+\tipotrabalho{monografia}
+\orientador{nome do orientador}
+\preambulo{texto sobre o objetivo, grau obtido, instituição e área de concentração}
+	
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%   INÍCIO DO DOCUMENTO	%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	CAPA E FOLHA DE ROSTO  %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\imprimircapa			% cria a capa
+\imprimirfolhaderosto	% cria a folha de rosto
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	FOLHA DE APROVAÇÃO (OBRIGATÓRIO) %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{folhadeaprovacao}
+	\begin{center}
+		{\ABNTEXchapterfont\large\textsc{\imprimirautor}}
+		\vspace{0.29cm}
+		{\ABNTEXchapterfont\Large\bfseries\imprimirtitulo}
+	\end{center}
+	\vspace{1cm}
+	\hspace{.45\textwidth}
+	\begin{minipage}{.5\textwidth}
+		\imprimirpreambulo
+	\end{minipage}
+	\vspace{1.8cm}
+	
+	Trabalho aprovado. \imprimirlocal, \imprimirdata:
+	%% ASSINATURAS
+	\vspace{2cm}
+	\assinatura{\imprimirorientador \\IFSC}
+	\vspace{1cm}
+	\assinatura{Nome Professor\\ IFSC}
+	\vspace{1cm}
+	\assinatura{Nome Professor\\ IFSC}	
+	\vspace{1cm}
+	\assinatura{Nome Professor\\ IFSC}
+%% IMPRIME O LOCAL E HORA NO FINAL DA FOLHA
+
+	\begin{center}
+		\vfill %% preenche todo o espaço vertical vazio até o fim da folha
+		{\large\imprimirlocal}
+		\par
+		{\large\imprimirdata}
+	\end{center}
+\end{folhadeaprovacao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	DEDICATÓRIA (OPCIONAL) %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{dedicatoria}
+	\vspace*{\fill}
+		TEXTO DEDICATÓRIA
+	\vspace*{\fill}
+\end{dedicatoria}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AGRADECIMENTOS (OPCIONAL) %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{agradecimentos}
+
+	TEXTO AGRADECIMENTOS
+
+\end{agradecimentos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	EPÍGRAFE (OPCIONAL) %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{epigrafe}
+	\vspace*{\fill}
+	\begin{flushright}
+		\textit{"CITAÇÃO"\\
+		(AUTORDACITAÇÃO )}
+	\end{flushright}
+\end{epigrafe}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	RESUMO (OBRIGATÓRIO) %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumo}
+
+TEXTO DO RESUMO
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: PalavraChave1, PalavraChave2, ...
+\end{resumo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	ABSTRACT (OBRIGATÓRIO) %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{resumo}[Abstract]
+	\begin{otherlanguage*}{english}
+	
+		texto do abstract
+		
+		\vspace{\onelineskip}
+		\noindent
+		\textbf{Keywords}: keyword1; keyword2; keyword3; ...
+	\end{otherlanguage*}
+\end{resumo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	SIGLAS (OBRIGATÓRIO SE HOUVER) %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{siglas}
+
+	\item[IFSC] Instituto Federal de Santa Catarina
+	
+\end{siglas}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	IMPRIME O SUMÁRIO %%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents* % imprime sumário
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%   ELEMENTOS TEXTUAIS	%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textual
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	INTRODUÇÃO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introdução}
+
+texto da introdução
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	FUNDAMENTAÇÃO TEÓRICA %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{TÍTULO DO \textit{CAPÍTULO}}
+
+	\section{SEÇÃO}
+	
+		\subsection{SUBSEÇÃO}
+		
+\paragraph{PARÁGRAFO}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%% ELEMENTOS PÓS-TEXTUAIS	%%%%%%%%%%%
+%%%%%%%%%%%							%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\postextual
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	BIBLIOGRAFIA %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{article-bibliography}
+
+
+\end{document}
